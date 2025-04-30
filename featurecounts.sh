@@ -13,9 +13,9 @@ module load build-env/.f2021
 module load subread/2.0.2-gcc-10.2.0  # Load FeatureCounts
 
 
-BAM_DIR="/groups/ma/sradata/star_output"
-OUTPUT_DIR="/groups/ma/sradata/featurecounts_output"
-GTF_FILE="/groups/ma/sradata/Reference_genome/genomic.gtf"
+BAM_DIR="path_to_directory/star_output"
+OUTPUT_DIR="path_to_directoryfeaturecounts_output"
+GTF_FILE="genomic.gtf"
 mkdir -p "$OUTPUT_DIR"
 
 BAM_FILES=$(ls $BAM_DIR/*Aligned.sortedByCoord.out.bam | tr '\n' ' ')
