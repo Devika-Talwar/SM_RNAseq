@@ -14,12 +14,12 @@ module load build-env/f2022
 module load star/2.7.11a-gcc-12.3.0
 module load samtools/1.18-gcc-12.3.0
 
-GENOME_FA="/groups/ma/sradata/Reference_genome/smgenomic.fa"
-ANNOTATION_GTF="/groups/ma/sradata/Reference_genome/genomic.gtf"
-GENOME_DIR="/groups/ma/sradata/Reference_genome"
+GENOME_FA="genomic.fa"
+ANNOTATION_GTF="genomic.gtf"
+GENOME_DIR="path_to_directory/Reference_genome"
 
-FASTQ_DIR="/groups/ma/sradata/fastqfixed/fixed_fastq"                
-OUTPUT_DIR="/groups/ma/sradata/star_output"
+FASTQ_DIR="path_to_directory/fastq"                
+OUTPUT_DIR="path_to_directory"
                     
 
 echo "Starting genome indexing..."
