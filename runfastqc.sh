@@ -13,9 +13,9 @@ module load build-env/f2022
 module load fastqc/0.11.9-java-11
 
 
-INPUT_DIR="/groups/ma/sradata/trimmomatic_results"
-OUTPUT_DIR="/groups/ma/sradata/qcresults2"
+INPUT_DIR="path_to_directory/trimmomatic_results"
+OUTPUT_DIR="path_to_directory/qcresults2"
 
 
-fastqc -o $"/groups/ma/sradata/qcresults2" $"/groups/ma/sradata/trimmomatic_results"/*fastq
+fastqc -o $"qcresults2" $"trimmomatic_results"/*fastq
 
