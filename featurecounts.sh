@@ -14,7 +14,7 @@ module load subread/2.0.2-gcc-10.2.0  # Load FeatureCounts
 
 
 BAM_DIR="path_to_directory/star_output"
-OUTPUT_DIR="path_to_directoryfeaturecounts_output"
+OUTPUT_DIR="path_to_directory/featurecounts_output"
 GTF_FILE="genomic.gtf"
 mkdir -p "$OUTPUT_DIR"
 
