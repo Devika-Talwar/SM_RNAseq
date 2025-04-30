@@ -7,17 +7,6 @@ rownames(metadata)
 library(pheatmap)
 genes_of_interest <- c("list_of_genes") 
 subset_data <- count_data[rownames(count_data) %in% genes_of_interest, ]
-pheatmap(count_data, 
-         
-         scale = "row",
-         cluster_cols = FALSE,
-         cluster_rows = FALSE,
-         clustering_distance_rows = "correlation", 
-         clustering_distance_cols = "euclidean",
-         show_rownames = TRUE, 
-         show_colnames = TRUE,
-         fontsize_row = 8
-)
 colnames(subset_data) <- rownames(metadata)
 metadata <- metadata[match(colnames(subset_data), metadata$SampleID), ]
 all(colnames(subset_data) == metadata$SampleID)
@@ -33,3 +22,14 @@ subsetdata <- read.delim("subset_data.csv", header = TRUE, sep = ";")
 colnames(count_data) <- gsub("^X", "", colnames(count_data))
 logsubsetdata <- log2(subsetdata + 1)
 count_data <- read.delim("subsetdata.txt", row.names = 1)
+pheatmap(count_data, 
+         
+         scale = "row",
+         cluster_cols = FALSE,
+         cluster_rows = FALSE,
+         clustering_distance_rows = "correlation", 
+         clustering_distance_cols = "euclidean",
+         show_rownames = TRUE, 
+         show_colnames = TRUE,
+         fontsize_row = 8
+)
