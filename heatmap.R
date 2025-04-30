@@ -1,11 +1,11 @@
-count_data <- read.delim("/groups/ma/sradata/featurecounts_output/13.12.24/normalised_counts.txt", row.names = 1)
-metadata <- read.csv("/groups/ma/sradata/featurecounts_output/13.12.24/metadata.csv", header = TRUE, sep = ";")
+count_data <- read.delim("normalised_counts.txt", row.names = 1)
+metadata <- read.csv("metadata.csv", header = TRUE, sep = ";")
 rownames(metadata) <- metadata$SampleID
 colnames(count_data)
 colnames(count_data) <- gsub("^X", "", colnames(count_data))
 rownames(metadata)
 library(pheatmap)
-genes_of_interest <- c("LOC116340197", "LOC116340110", "LOC116340305", "LOC116345993", "LOC116347824", "LOC116340233", "LOC116345342", "LOC116352487", "LOC116351608", "LOC116340111", "LOC116349363", "LOC116342930", "LOC116341699", "LOC116350332", "LOC116350370") 
+genes_of_interest <- c("list_of_genes") 
 subset_data <- count_data[rownames(count_data) %in% genes_of_interest, ]
 pheatmap(count_data, 
          
@@ -28,8 +28,8 @@ metadata$LifeStage <- factor(metadata$LifeStage, levels = c(
   "3rd_instar_larvae",  "adult_female", "adult_male"
 ))
 logcountdata <- log2(subset_data + 1)
-write.csv(logcountdata, "/groups/ma/sradata/featurecounts_output/13.12.24/subset_data.csv", sep = "\t", row.names = TRUE, quote = FALSE)
-subsetdata <- read.delim("/groups/ma/sradata/featurecounts_output/13.12.24/subset_data.csv", header = TRUE, sep = ";")
+write.csv(logcountdata, "subset_data.csv", sep = "\t", row.names = TRUE, quote = FALSE)
+subsetdata <- read.delim("subset_data.csv", header = TRUE, sep = ";")
 colnames(count_data) <- gsub("^X", "", colnames(count_data))
 logsubsetdata <- log2(subsetdata + 1)
-count_data <- read.delim("/groups/ma/sradata/featurecounts_output/13.12.24/subsetdata.txt", row.names = 1)
+count_data <- read.delim("subsetdata.txt", row.names = 1)
