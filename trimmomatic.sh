@@ -10,9 +10,9 @@ module load trimmomatic/0.38-java-1.8
 java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.38.jar
 
 
-ADAPTERS="/users/devika.talwar/SM_transcriptomics/adapters.fa"
-INPUT_DIR="/groups/ma/sradata"
-OUTPUT_DIR="/groups/ma/sradata/trimmomatic_results"
+ADAPTERS="adapters.fa"
+INPUT_DIR="path_to_directory"
+OUTPUT_DIR="path_to_directory/trimmomatic_results"
 THREADS=4  
 
 mkdir -p "$OUTPUT_DIR"
