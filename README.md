@@ -3,7 +3,7 @@ RNAseq of different life stages of Swede midge
 
 **Step 1: Quality control**
 
-To perform simple quality checks to assess raw data FASTQC (0.11.9) was used. This was performed to ensure that the data is suitable for analysis and there are no problems or biases that can affect it. It performs preliminary quality checks using various analysis modules and generates a HTML QC report which can identify problems with the raw data. The input for FASTQC is a Fastq file containing raw sequence reads. 
+To perform simple quality checks to assess raw data, FASTQC (0.11.9) was used. This was performed to ensure that the data is suitable for analysis and there are no problems or biases that can affect it. It performs preliminary quality checks using various analysis modules and generates a HTML QC report which can identify problems with the raw data. The input for FASTQC is a Fastq file containing raw sequence reads. 
 
 **Step 2: Quality trimming (Optional)**
 
@@ -17,4 +17,8 @@ Reference genome (GCF_009176525) was indexed so that reads can efficiently align
 
 **Step 4: Quantification**
 
-Quantification of gene expression was done using featurecounts (2.0.2). 
+Quantification of gene expression was done using featurecounts (2.0.2). BAM files were provided as input along with the annotation file to use metafeatures as reference for counting. Output is generated in the form of text file.
+
+**Step 5: Normalization**
+
+
