@@ -48,5 +48,6 @@ write.table(normalized_counts, file = "normalized_counts.txt", sep = "\t", quote
 rlog_counts <- rlog(dds)
 plotPCA(rlog_counts, intgroup = "condition")
 boxplot(assay(rlog_counts), las = 2, main = "Boxplot of Normalized Counts")
+boxplot(log2(normalized_counts + 1), las = 2, main = "Log2 Raw Counts")
 res <- results(dds)
 summary(res)
