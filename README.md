@@ -13,4 +13,7 @@ Rerun FASTQC on trimmomatic output to compare the reports. fastqc reports were g
 
 **Step 3: Mapping to genome using STAR (Spliced Transcripts Alignment to a Reference) (2.7.11a)**
 
-Reference genome (GCF_009176525) was indexed so that reads can efficiently align to it. Reads were aligned to the reference genome and outputs were generated in BAM format for all the files. Output BAM files were indexed using samtools ()
+Reference genome (GCF_009176525) was indexed so that reads can efficiently align to it. Reads were aligned to the reference genome and outputs were generated in BAM format. Output BAM files were indexed using samtools (1.18). Gene expression was quantified by counting the no. of reads aligned to each gene using --quantMode option in STAR alignment. STAR output containing read counts per gene were generated into Reads.PerGene.out files. Log files were generated to look at the post alignment stats (Uniquely mapped reads %). 
+
+**Step 4: Quantification**
+
