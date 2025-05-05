@@ -17,7 +17,7 @@ Reference genome (GCF_009176525) was indexed so that reads can efficiently align
 
 **Step 4: Quantification**
 
-Quantification of gene expression was done using featurecounts (2.0.2). BAM files were provided as input along with the annotation file to use metafeatures as reference for counting. Output is generated in the form of text file.
+Quantification of gene expression was done using featurecounts (2.0.2). BAM files were provided as input along with the annotation file to use metafeatures as reference for counting. Output was generated in the form of text file.
 
 **Step 5: Normalization**
 
