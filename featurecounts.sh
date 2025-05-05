@@ -10,7 +10,7 @@
 
 
 module load build-env/.f2021
-module load subread/2.0.2-gcc-10.2.0  # Load FeatureCounts
+module load subread/2.0.2-gcc-10.2.0  
 
 
 BAM_DIR="path_to_directory/star_output"
