@@ -13,4 +13,4 @@ Rerun FASTQC on trimmomatic output to compare the reports. fastqc reports were g
 
 **Step 3: Mapping to genome using STAR (Spliced Transcripts Alignment to a Reference) (2.7.11a)**
 
-Reference genome (GCF_009176525) was indexed so that reads can efficiently align to it. 
+Reference genome (GCF_009176525) was indexed so that reads can efficiently align to it. Reads were aligned to the reference genome and outputs were generated in BAM format for all the files. Output BAM files were indexed using samtools ()
